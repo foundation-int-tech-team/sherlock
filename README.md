@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 If you are not familiar with Scrapy, I advise you to read the [tutorial](https://docs.scrapy.org/en/latest/intro/tutorial.html).
 The project currently contains two spiders. A spider is a classe which define how a certain site will be scraped, including how to perform the crawl (i.e. follow links) and how to extract structured data from their pages (i.e. scraping items).
-The spiders only retrieve data for one wiki at a time. You have to provide them with the name of the target site as an argument (i.e `fondationscp`, `scp-wiki`, `scpko`...) with the following syntax `-a site=name`.
+The spiders only retrieve data for one wiki at a time. You have to provide them with the name of the target site as an argument (i.e `fondationscp`, `scp-wiki`, `scpko`...) with the following syntax `-a site=<name>`.
 
 > The branches and their associated metadata are located in the `config.json` file.
 
@@ -157,6 +157,8 @@ This file is responsible for directing the crawler to the relevant information o
   [...]
 }
 ```
+
+When you give `-a site=<name>`, name is searched as the key from this file and the corresponding value is loaded as the current configuration.
 
 > Note: `language` must be supported by [nltk](https://github.com/nltk/nltk) and its [`punkt`](https://github.com/nltk/nltk_data/blob/gh-pages/packages/tokenizers/punkt.xml) dataset
 
