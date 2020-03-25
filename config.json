@@ -1,0 +1,83 @@
+{
+  "scp-wiki": {
+    "id": 66711,
+    "index": [],
+    "language": "english"
+  },
+  "scpko": {
+    "id": 486864,
+    "index": [],
+    "language": null
+  },
+  "scp-wiki-cn": {
+    "id": 530812,
+    "index": [],
+    "language": null
+  },
+  "fondationscp": {
+    "id": 464696,
+    "index": [
+      "scp-series",
+      "scp-series-2",
+      "scp-series-3",
+      "scp-series-4",
+      "scp-series-5",
+      "scp-series-6",
+      "scp-series-hub",
+      "liste-francaise",
+      "scps-humoristiques-francais",
+      "joke-scps"
+    ],
+    "language": "french"
+  },
+  "scp-pl": {
+    "id": 647733,
+    "index": [],
+    "language": "polish"
+  },
+  "lafundacionscp": {
+    "id": 560484,
+    "index": [],
+    "language": "spanish"
+  },
+  "scp-th": {
+    "id": 547203,
+    "index": [],
+    "language": null
+  },
+  "scp-jp": {
+    "id": 578002,
+    "index": [],
+    "language": null
+  },
+  "scp-wiki-de": {
+    "id": 1269857,
+    "index": [],
+    "language": "german"
+  },
+  "fondazionescp": {
+    "id": 530167,
+    "index": [],
+    "language": "italian"
+  },
+  "scp-ukrainian": {
+    "id": 1398197,
+    "index": [],
+    "language": null
+  },
+  "scp-pt-br": {
+    "id": 783633,
+    "index": [],
+    "language": "portuguese"
+  },
+  "scp-int": {
+    "id": 1427610,
+    "index": [],
+    "language": "english"
+  },
+  "scp-ru": {
+    "id": 169125,
+    "index": [],
+    "language": "russian"
+  }
+}

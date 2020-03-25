@@ -1,26 +1,28 @@
 # -*- coding: utf-8 -*-
 import scrapy
 
-from src import utils, items, regex
+from sherlock import items
+from sherlock.lib import Config, Wikidot, regex
 
 
 class MembersSpider(scrapy.Spider):
     name = 'members'
     allowed_domains = ['wikidot.com']
 
-    site = None
-
     def __init__(self, site=None, *args, **kwargs):
         super(MembersSpider, self).__init__(*args, **kwargs)
 
-        if site is None:
-            raise AssertionError("You must provide a `site` to crawl")
+        Config.check(site)
 
-        self.api = utils.wikidot(site, 'ajax-module-connector.php')
-        self.site = site
+        self.info = {
+            "branch_id": str(Config.get(site, 'id'))
+        }
+
+        self.api = Wikidot.path(site, 'ajax-module-connector.php')
 
     def start_requests(self):
-        data, cookie = utils.request('membership/MembersListModule')
+        data, cookie = Wikidot.request(
+            'membership/MembersListModule', per_page=1000000)
         yield scrapy.FormRequest(self.api,
                                  cookies=cookie,
                                  formdata=data,
@@ -29,10 +31,12 @@ class MembersSpider(scrapy.Spider):
     def analyze_members_list(self, response):
         total = response.css('.pager .target:nth-last-child(2) a::text').get()
 
+        # we analyze the pagination to find the total number of pages
         for page in range(0, int(total)):
-            data, cookie = utils.request(
+            data, cookie = Wikidot.request(
                 'membership/MembersListModule',
-                page=page + 1
+                page=page + 1,
+                per_page=1000000
             )
 
             yield scrapy.FormRequest(self.api, cookies=cookie, formdata=data)
@@ -43,12 +47,12 @@ class MembersSpider(scrapy.Spider):
             user = row.xpath('./td[1]/span/a[1]')
             item = scrapy.loader.ItemLoader(item=items.Member(), selector=user)
 
-            item.add_value('site', self.site)
-            item.add_xpath('username', '@href', re=regex.regex['username'])
-            item.add_xpath('id', '@onclick', re=regex.regex['user_id'])
-            item.add_xpath('pseudo', './img/@alt')
+            item.add_value('branch_id', self.info['branch_id'])
+            item.add_xpath('user_id', '@onclick', re=regex['user_id'])
+            item.add_xpath('slug', '@href', re=regex['user_slug'])
+            item.add_xpath('username', './img/@alt')
 
             since = row.xpath('./td[2]/span/@class').get()
-            item.add_value('member_since', since, re=regex.regex['timestamp'])
+            item.add_value('member_since', since, re=regex['timestamp'])
 
             yield item.load_item()

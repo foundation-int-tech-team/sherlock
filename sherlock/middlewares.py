@@ -2,14 +2,12 @@
 import json
 import re
 
-from scrapy import exceptions, signals
+from scrapy import exceptions
 
-
-forbidden = re.compile(r'\/(_|nav:|admin:|system:|css:|forum:?|search:)')
+forbidden = re.compile(r'\/(_|nav:|admin:|system:|css:|forum:?|search:|test:)')
 
 
 class SherlockDownloaderMiddleware(object):
-
     def process_request(self, request, spider):
         """Prohibit incompatible URL"""
         url = request.url
@@ -18,7 +16,7 @@ class SherlockDownloaderMiddleware(object):
             raise exceptions.IgnoreRequest('{} is blacklisted'.format(url))
 
     def process_response(self, request, response, spider):
-        """Format Wikidot API response"""
+        """Format Wikidot response"""
 
         #  Wikidot famous
         #      ⊂_ヽ
@@ -38,6 +36,8 @@ class SherlockDownloaderMiddleware(object):
         #    (_／
 
         url = response.url
+
+        # if the response is coming from Wikidot API
         if url.endswith('ajax-module-connector.php'):
             data = json.loads(response.text)
 
