@@ -5,7 +5,7 @@
 <h2 align="center">Sherlock</h2>
 
 <p align="center">
-    <em>A web crawler to retrieve Wikidot information</em>
+    <em>A web crawler to retrieve Wikidot informations</em>
 </p>
 
 <p align="center">
@@ -142,17 +142,17 @@ The collected objects will be of the following form
 
 This file is responsible for directing the crawler to the relevant information of the branch concerned. This file looks like this:
 
-```json
+```python
 {
   [...]
-  "scp-wiki": { /* as it is hosted at scp-wiki.wikidot.com */
-    "id": 66711, /* ID that wikidot gave to the branch site */
-    "index": [ /* list of paths where the crawler can find the titles of the different SCP */
+  "scp-wiki": { # as it is hosted at scp-wiki.wikidot.com
+    "id": 66711, # ID that wikidot gave to the branch site
+    "index": [ # list of paths where the crawler can find the titles of the different SCP
       "scp-series",
       "scp-series-2",
       [...]
     ],
-    "language": "english" /* language is used to generate a preview of the page */
+    "language": "english" # language is used to generate a preview of the page
   },
   [...]
 }
