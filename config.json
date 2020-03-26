@@ -1,7 +1,17 @@
 {
   "scp-wiki": {
     "id": 66711,
-    "index": [],
+    "index": [
+      "scp-series",
+      "scp-series-2",
+      "scp-series-3",
+      "scp-series-4",
+      "scp-series-5",
+      "scp-series-6",
+      "joke-scps",
+      "scp-ex",
+      "attribution-metadata"
+    ],
     "language": "english"
   },
   "scpko": {
@@ -11,8 +21,23 @@
   },
   "scp-wiki-cn": {
     "id": 530812,
-    "index": [],
-    "language": null
+    "index": [
+      "scp-series",
+      "scp-series-2",
+      "scp-series-3",
+      "scp-series-4",
+      "scp-series-5",
+      "scp-series-6",
+      "joke-scps",
+      "scp-ex",
+      "scp-series-cn",
+      "scp-series-cn-2",
+      "joke-scps-cn",
+      "scp-ex-cn",
+      "scp-international",
+      "attribution-metadata"
+    ],
+    "language": "chinese"
   },
   "fondationscp": {
     "id": 464696,
