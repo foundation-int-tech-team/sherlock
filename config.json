@@ -79,5 +79,22 @@
     "id": 169125,
     "index": [],
     "language": "russian"
+  },
+  "scp-zh-tr": {
+    "id": 3947998,
+    "index": [
+      "scp-series",
+      "scp-series-2",
+      "scp-series-3",
+      "scp-series-4",
+      "scp-series-5",
+      "scp-series-6",
+      "scp-int-translation-hub",
+      "scp-series-zh",
+      "joke-scps",
+      "scp-ex",
+      "archived-scps"
+    ],
+    "language": "chinese (traditional)"
   }
 }
