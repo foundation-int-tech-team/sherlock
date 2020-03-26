@@ -25,8 +25,6 @@ class SherlockPipeline(object):
         if isinstance(item, items.Page):
             item.setdefault('tag', [])
 
-            print(item.get('preview'))
-
             if 'admin' in item['tag']:
                 raise exceptions.DropItem('"admin" tag found')
 
