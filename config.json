@@ -10,8 +10,7 @@
       "scp-series-6",
       "joke-scps",
       "scp-ex",
-      "archived-scps",
-      "attribution-metadata"
+      "archived-scps"
     ],
     "language": "english"
   },
@@ -36,10 +35,9 @@
       "scp-series-cn-2",
       "joke-scps-cn",
       "scp-ex-cn",
-      "scp-international",
-      "attribution-metadata"
+      "scp-international"
     ],
-    "language": "chinese"
+    "language": null
   },
   "fondationscp": {
     "id": 464696,
