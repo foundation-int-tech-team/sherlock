@@ -1,7 +1,17 @@
 {
   "scp-wiki": {
     "id": 66711,
-    "index": [],
+    "index": [
+      "scp-series",
+      "scp-series-2",
+      "scp-series-3",
+      "scp-series-4",
+      "scp-series-5",
+      "scp-series-6",
+      "joke-scps",
+      "scp-ex",
+      "archived-scps"
+    ],
     "language": "english"
   },
   "scpko": {
@@ -41,7 +51,8 @@
       "scp-series-hub",
       "liste-francaise",
       "scps-humoristiques-francais",
-      "joke-scps"
+      "joke-scps",
+      "scp-ex"
     ],
     "language": "french"
   },
@@ -52,7 +63,23 @@
   },
   "lafundacionscp": {
     "id": 560484,
-    "index": [],
+    "index": [
+      "scp-series",
+      "scp-series-2",
+      "scp-series-3",
+      "scp-series-4",
+      "scp-series-5",
+      "scp-series-6",
+      "scp-series-hub",
+      "serie-scp-es",
+      "serie-scp-es-2",
+      "scps-humoristicos",
+      "scp-ex",
+      "objetos-anomalos-es-new",
+      "eventos-extranormales-es",
+      "lugares-inexplicables-es",
+      "relatos-de-la-fundacion-hispanoparlante"
+    ],
     "language": "spanish"
   },
   "scp-th": {
