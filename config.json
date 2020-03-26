@@ -11,7 +11,22 @@
   },
   "scp-wiki-cn": {
     "id": 530812,
-    "index": [],
+    "index": [
+      "scp-series",
+      "scp-series-2",
+      "scp-series-3",
+      "scp-series-4",
+      "scp-series-5",
+      "scp-series-6",
+      "scp-international",
+      "scp-series-cn",
+      "scp-series-cn-2",
+      "joke-scps",
+      "joke-scps-cn",
+      "scp-ex",
+      "scp-ex-cn",
+      "archived-scps"
+    ],
     "language": null
   },
   "fondationscp": {
@@ -95,6 +110,6 @@
       "scp-ex",
       "archived-scps"
     ],
-    "language": "chinese (traditional)"
+    "language": null
   }
 }
