@@ -40,9 +40,14 @@ class SherlockDownloaderMiddleware(object):
 
         # if the response is coming from Wikidot API
         if url.endswith('ajax-module-connector.php'):
-            data = json.loads(response.text)
+            data = None
+            try:
+                data = json.loads(response.text)
+            except json.decoder.JSONDecodeError:
+                print("Error with ", response.text)
 
             if data['status'] != 'ok':
+                # TODO: add metadata logging
                 raise exceptions.IgnoreRequest(
                     'status != ok for {}'.format(url))
 
