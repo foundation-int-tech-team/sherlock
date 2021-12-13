@@ -16,7 +16,7 @@ itemloaders==1.0.2
 jmespath==0.10.0
 joblib==0.16.0
 lazy-object-proxy==1.4.3
-lxml==4.6.3
+lxml==4.6.5
 mccabe==0.6.1
 nltk==3.5
 parsel==1.6.0
