@@ -34,7 +34,7 @@ python-dotenv==0.14.0
 queries==2.1.0
 queuelib==1.5.0
 regex==2020.7.14
-Scrapy==2.3.0
+Scrapy==2.6.2
 service-identity==18.1.0
 six==1.15.0
 toml==0.10.1
